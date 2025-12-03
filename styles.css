@@ -114,6 +114,7 @@ body {
     margin-top: 70px;
     height: 600px;
     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    /* TODO: Replace placeholder with real automotive showroom image */
     background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), 
                       url('https://via.placeholder.com/1920x1080/2c3e50/ffffff?text=Luxury+Cars+Showroom');
     background-size: cover;
@@ -621,6 +622,28 @@ section {
     to {
         opacity: 1;
         transform: translateY(0);
+    }
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(400px);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideOut {
+    from {
+        transform: translateX(0);
+        opacity: 1;
+    }
+    to {
+        transform: translateX(400px);
+        opacity: 0;
     }
 }
 

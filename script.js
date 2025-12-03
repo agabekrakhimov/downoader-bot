@@ -102,7 +102,8 @@ function filterUsedCars() {
     cards.forEach(card => {
         const title = card.querySelector('.car-title').textContent.toLowerCase();
         const specs = card.querySelector('.car-specs').textContent.toLowerCase();
-        const yearMatch = title.match(/\d{4}/);
+        // Match realistic car years (1900-2099)
+        const yearMatch = title.match(/\b(19|20)\d{2}\b/);
         const carYear = yearMatch ? yearMatch[0] : '';
         
         let matchesSearch = title.includes(searchTerm) || specs.includes(searchTerm);
@@ -129,9 +130,15 @@ yearFilter.addEventListener('change', filterUsedCars);
 
 // Contact Form Submission
 const contactForm = document.getElementById('contactForm');
+const formButton = contactForm.querySelector('button[type="submit"]');
+const originalButtonText = formButton.textContent;
 
 contactForm.addEventListener('submit', function(e) {
     e.preventDefault();
+    
+    // Add loading state
+    formButton.textContent = 'Sending...';
+    formButton.disabled = true;
     
     // Get form data
     const formData = {
@@ -145,11 +152,16 @@ contactForm.addEventListener('submit', function(e) {
     // In a real application, you would send this data to a server
     console.log('Form submitted:', formData);
     
-    // Show success message
-    alert('Thank you for contacting ODO Motors! We will get back to you soon.');
-    
-    // Reset form
-    contactForm.reset();
+    // Simulate async operation
+    setTimeout(() => {
+        // Show success message with better UX
+        showSuccessMessage('Thank you for contacting ODO Motors! We will get back to you soon.');
+        
+        // Reset form and button
+        contactForm.reset();
+        formButton.textContent = originalButtonText;
+        formButton.disabled = false;
+    }, 1000);
 });
 
 // Contact Buttons (Car Cards)
@@ -178,6 +190,34 @@ document.querySelectorAll('.btn-contact').forEach(button => {
         }, 500);
     });
 });
+
+// Success message display function
+function showSuccessMessage(message) {
+    // Create toast notification
+    const toast = document.createElement('div');
+    toast.className = 'toast-notification';
+    toast.textContent = message;
+    toast.style.cssText = `
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        background: #27ae60;
+        color: white;
+        padding: 1rem 2rem;
+        border-radius: 5px;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+        z-index: 10000;
+        animation: slideIn 0.3s ease;
+    `;
+    
+    document.body.appendChild(toast);
+    
+    // Remove toast after 3 seconds
+    setTimeout(() => {
+        toast.style.animation = 'slideOut 0.3s ease';
+        setTimeout(() => toast.remove(), 300);
+    }, 3000);
+}
 
 // Scroll Animation for Cards
 function revealOnScroll() {
@@ -242,20 +282,6 @@ document.querySelectorAll('.car-image img').forEach(img => {
     });
     img.style.opacity = '0';
     img.style.transition = 'opacity 0.3s ease';
-});
-
-// Add loading state for form submission
-const formButton = contactForm.querySelector('button[type="submit"]');
-const originalButtonText = formButton.textContent;
-
-contactForm.addEventListener('submit', function(e) {
-    formButton.textContent = 'Sending...';
-    formButton.disabled = true;
-    
-    setTimeout(() => {
-        formButton.textContent = originalButtonText;
-        formButton.disabled = false;
-    }, 2000);
 });
 
 // Count animation for stats
