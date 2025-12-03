@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ODO Motors - Premium Car Dealership in Uzbekistan</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="container">
+                <div class="nav-wrapper">
+                    <div class="logo">
+                        <h1>ODO<span>Motors</span></h1>
+                    </div>
+                    <ul class="nav-menu" id="navMenu">
+                        <li><a href="#home" class="nav-link">Home</a></li>
+                        <li><a href="#import" class="nav-link">Imported Cars</a></li>
+                        <li><a href="#marketplace" class="nav-link">Used Cars</a></li>
+                        <li><a href="#about" class="nav-link">About Us</a></li>
+                        <li><a href="#contact" class="nav-link">Contact</a></li>
+                    </ul>
+                    <div class="hamburger" id="hamburger">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-overlay">
+            <div class="container">
+                <div class="hero-content">
+                    <h1 class="hero-title">Welcome to ODO Motors</h1>
+                    <p class="hero-subtitle">Premium Cars Imported to Uzbekistan & Local Used Car Marketplace</p>
+                    <div class="hero-buttons">
+                        <a href="#import" class="btn btn-primary">Browse Imported Cars</a>
+                        <a href="#marketplace" class="btn btn-secondary">Explore Used Cars</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features">
+        <div class="container">
+            <h2 class="section-title">Why Choose ODO Motors?</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">🚗</div>
+                    <h3>Premium Imports</h3>
+                    <p>We bring the finest vehicles from international markets directly to Uzbekistan</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">✓</div>
+                    <h3>Quality Assured</h3>
+                    <p>Every car is thoroughly inspected and certified before delivery</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">💰</div>
+                    <h3>Best Prices</h3>
+                    <p>Competitive pricing with transparent costs and no hidden fees</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🤝</div>
+                    <h3>Trusted Service</h3>
+                    <p>Years of experience helping customers find their perfect vehicle</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Imported Cars Section -->
+    <section class="imported-cars" id="import">
+        <div class="container">
+            <h2 class="section-title">Imported Cars Collection</h2>
+            <p class="section-subtitle">Premium vehicles imported from international markets</p>
+            
+            <div class="filter-bar">
+                <input type="text" id="searchImport" class="search-input" placeholder="Search by brand, model...">
+                <select id="brandFilter" class="filter-select">
+                    <option value="">All Brands</option>
+                    <option value="toyota">Toyota</option>
+                    <option value="mercedes">Mercedes-Benz</option>
+                    <option value="bmw">BMW</option>
+                    <option value="audi">Audi</option>
+                    <option value="lexus">Lexus</option>
+                    <option value="honda">Honda</option>
+                </select>
+                <select id="priceFilter" class="filter-select">
+                    <option value="">All Prices</option>
+                    <option value="0-20000">Under $20,000</option>
+                    <option value="20000-40000">$20,000 - $40,000</option>
+                    <option value="40000-60000">$40,000 - $60,000</option>
+                    <option value="60000+">$60,000+</option>
+                </select>
+            </div>
+
+            <div class="cars-grid" id="importedCarsGrid">
+                <!-- Car Card 1 -->
+                <div class="car-card" data-brand="toyota" data-price="35000" data-status="new">
+                    <div class="car-image">
+                        <img src="https://via.placeholder.com/400x300/2c3e50/ffffff?text=Toyota+Land+Cruiser+2024" alt="Toyota Land Cruiser">
+                        <span class="car-badge new">New Import</span>
+                    </div>
+                    <div class="car-info">
+                        <h3 class="car-title">Toyota Land Cruiser 2024</h3>
+                        <p class="car-specs">V6 Engine • 4WD • Automatic</p>
+                        <div class="car-details">
+                            <span class="detail-item">📅 2024</span>
+                            <span class="detail-item">⚙️ Automatic</span>
+                            <span class="detail-item">⛽ Petrol</span>
+                        </div>
+                        <div class="car-footer">
+                            <span class="car-price">$35,000</span>
+                            <button class="btn-contact">Contact Us</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Car Card 2 -->
+                <div class="car-card" data-brand="mercedes" data-price="65000" data-status="new">
+                    <div class="car-image">
+                        <img src="https://via.placeholder.com/400x300/2c3e50/ffffff?text=Mercedes-Benz+E-Class" alt="Mercedes E-Class">
+                        <span class="car-badge new">New Import</span>
+                    </div>
+                    <div class="car-info">
+                        <h3 class="car-title">Mercedes-Benz E-Class 2024</h3>
+                        <p class="car-specs">2.0L Turbo • AWD • Automatic</p>
+                        <div class="car-details">
+                            <span class="detail-item">📅 2024</span>
+                            <span class="detail-item">⚙️ Automatic</span>
+                            <span class="detail-item">⛽ Petrol</span>
+                        </div>
+                        <div class="car-footer">
+                            <span class="car-price">$65,000</span>
+                            <button class="btn-contact">Contact Us</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Car Card 3 -->
+                <div class="car-card" data-brand="bmw" data-price="55000" data-status="new">
+                    <div class="car-image">
+                        <img src="https://via.placeholder.com/400x300/2c3e50/ffffff?text=BMW+X5+2024" alt="BMW X5">
+                        <span class="car-badge new">New Import</span>
+                    </div>
+                    <div class="car-info">
+                        <h3 class="car-title">BMW X5 2024</h3>
+                        <p class="car-specs">3.0L Inline-6 • AWD • Automatic</p>
+                        <div class="car-details">
+                            <span class="detail-item">📅 2024</span>
+                            <span class="detail-item">⚙️ Automatic</span>
+                            <span class="detail-item">⛽ Petrol</span>
+                        </div>
+                        <div class="car-footer">
+                            <span class="car-price">$55,000</span>
+                            <button class="btn-contact">Contact Us</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Car Card 4 -->
+                <div class="car-card" data-brand="lexus" data-price="48000" data-status="new">
+                    <div class="car-image">
+                        <img src="https://via.placeholder.com/400x300/2c3e50/ffffff?text=Lexus+RX+350" alt="Lexus RX 350">
+                        <span class="car-badge new">New Import</span>
+                    </div>
+                    <div class="car-info">
+                        <h3 class="car-title">Lexus RX 350 2024</h3>
+                        <p class="car-specs">3.5L V6 • AWD • Automatic</p>
+                        <div class="car-details">
+                            <span class="detail-item">📅 2024</span>
+                            <span class="detail-item">⚙️ Automatic</span>
+                            <span class="detail-item">⛽ Hybrid</span>
+                        </div>
+                        <div class="car-footer">
+                            <span class="car-price">$48,000</span>
+                            <button class="btn-contact">Contact Us</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Car Card 5 -->
+                <div class="car-card" data-brand="audi" data-price="52000" data-status="new">
+                    <div class="car-image">
+                        <img src="https://via.placeholder.com/400x300/2c3e50/ffffff?text=Audi+Q7+2024" alt="Audi Q7">
+                        <span class="car-badge new">New Import</span>
+                    </div>
+                    <div class="car-info">
+                        <h3 class="car-title">Audi Q7 2024</h3>
+                        <p class="car-specs">3.0L V6 • Quattro AWD • Automatic</p>
+                        <div class="car-details">
+                            <span class="detail-item">📅 2024</span>
+                            <span class="detail-item">⚙️ Automatic</span>
+                            <span class="detail-item">⛽ Petrol</span>
+                        </div>
+                        <div class="car-footer">
+                            <span class="car-price">$52,000</span>
+                            <button class="btn-contact">Contact Us</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Car Card 6 -->
+                <div class="car-card" data-brand="honda" data-price="28000" data-status="new">
+                    <div class="car-image">
+                        <img src="https://via.placeholder.com/400x300/2c3e50/ffffff?text=Honda+CR-V+2024" alt="Honda CR-V">
+                        <span class="car-badge new">New Import</span>
+                    </div>
+                    <div class="car-info">
+                        <h3 class="car-title">Honda CR-V 2024</h3>
+                        <p class="car-specs">1.5L Turbo • AWD • Automatic</p>
+                        <div class="car-details">
+                            <span class="detail-item">📅 2024</span>
+                            <span class="detail-item">⚙️ Automatic</span>
+                            <span class="detail-item">⛽ Petrol</span>
+                        </div>
+                        <div class="car-footer">
+                            <span class="car-price">$28,000</span>
+                            <button class="btn-contact">Contact Us</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Used Cars Marketplace Section -->
+    <section class="marketplace" id="marketplace">
+        <div class="container">
+            <h2 class="section-title">Used Cars Marketplace</h2>
+            <p class="section-subtitle">Quality pre-owned vehicles from trusted sellers in Uzbekistan</p>
+            
+            <div class="filter-bar">
+                <input type="text" id="searchUsed" class="search-input" placeholder="Search by brand, model...">
+                <select id="yearFilter" class="filter-select">
+                    <option value="">All Years</option>
+                    <option value="2023">2023</option>
+                    <option value="2022">2022</option>
+                    <option value="2021">2021</option>
+                    <option value="2020">2020</option>
+                    <option value="older">2019 & Older</option>
+                </select>
+            </div>
+
+            <div class="cars-grid" id="usedCarsGrid">
+                <!-- Used Car Card 1 -->
+                <div class="car-card" data-brand="toyota" data-price="15000" data-status="used">
+                    <div class="car-image">
+                        <img src="https://via.placeholder.com/400x300/34495e/ffffff?text=Toyota+Camry+2021" alt="Toyota Camry">
+                        <span class="car-badge used">Used</span>
+                    </div>
+                    <div class="car-info">
+                        <h3 class="car-title">Toyota Camry 2021</h3>
+                        <p class="car-specs">2.5L • FWD • Automatic • 45,000 km</p>
+                        <div class="car-details">
+                            <span class="detail-item">📅 2021</span>
+                            <span class="detail-item">⚙️ Automatic</span>
+                            <span class="detail-item">📏 45,000 km</span>
+                        </div>
+                        <div class="car-footer">
+                            <span class="car-price">$15,000</span>
+                            <button class="btn-contact">Contact Seller</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Used Car Card 2 -->
+                <div class="car-card" data-brand="chevrolet" data-price="12000" data-status="used">
+                    <div class="car-image">
+                        <img src="https://via.placeholder.com/400x300/34495e/ffffff?text=Chevrolet+Malibu+2020" alt="Chevrolet Malibu">
+                        <span class="car-badge used">Used</span>
+                    </div>
+                    <div class="car-info">
+                        <h3 class="car-title">Chevrolet Malibu 2020</h3>
+                        <p class="car-specs">1.5L Turbo • FWD • Automatic • 60,000 km</p>
+                        <div class="car-details">
+                            <span class="detail-item">📅 2020</span>
+                            <span class="detail-item">⚙️ Automatic</span>
+                            <span class="detail-item">📏 60,000 km</span>
+                        </div>
+                        <div class="car-footer">
+                            <span class="car-price">$12,000</span>
+                            <button class="btn-contact">Contact Seller</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Used Car Card 3 -->
+                <div class="car-card" data-brand="hyundai" data-price="18000" data-status="used">
+                    <div class="car-image">
+                        <img src="https://via.placeholder.com/400x300/34495e/ffffff?text=Hyundai+Tucson+2022" alt="Hyundai Tucson">
+                        <span class="car-badge used">Used</span>
+                    </div>
+                    <div class="car-info">
+                        <h3 class="car-title">Hyundai Tucson 2022</h3>
+                        <p class="car-specs">2.0L • AWD • Automatic • 30,000 km</p>
+                        <div class="car-details">
+                            <span class="detail-item">📅 2022</span>
+                            <span class="detail-item">⚙️ Automatic</span>
+                            <span class="detail-item">📏 30,000 km</span>
+                        </div>
+                        <div class="car-footer">
+                            <span class="car-price">$18,000</span>
+                            <button class="btn-contact">Contact Seller</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Used Car Card 4 -->
+                <div class="car-card" data-brand="kia" data-price="14000" data-status="used">
+                    <div class="car-image">
+                        <img src="https://via.placeholder.com/400x300/34495e/ffffff?text=Kia+Sportage+2021" alt="Kia Sportage">
+                        <span class="car-badge used">Used</span>
+                    </div>
+                    <div class="car-info">
+                        <h3 class="car-title">Kia Sportage 2021</h3>
+                        <p class="car-specs">2.4L • AWD • Automatic • 52,000 km</p>
+                        <div class="car-details">
+                            <span class="detail-item">📅 2021</span>
+                            <span class="detail-item">⚙️ Automatic</span>
+                            <span class="detail-item">📏 52,000 km</span>
+                        </div>
+                        <div class="car-footer">
+                            <span class="car-price">$14,000</span>
+                            <button class="btn-contact">Contact Seller</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Used Car Card 5 -->
+                <div class="car-card" data-brand="nissan" data-price="11000" data-status="used">
+                    <div class="car-image">
+                        <img src="https://via.placeholder.com/400x300/34495e/ffffff?text=Nissan+Altima+2020" alt="Nissan Altima">
+                        <span class="car-badge used">Used</span>
+                    </div>
+                    <div class="car-info">
+                        <h3 class="car-title">Nissan Altima 2020</h3>
+                        <p class="car-specs">2.5L • FWD • Automatic • 70,000 km</p>
+                        <div class="car-details">
+                            <span class="detail-item">📅 2020</span>
+                            <span class="detail-item">⚙️ Automatic</span>
+                            <span class="detail-item">📏 70,000 km</span>
+                        </div>
+                        <div class="car-footer">
+                            <span class="car-price">$11,000</span>
+                            <button class="btn-contact">Contact Seller</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Used Car Card 6 -->
+                <div class="car-card" data-brand="volkswagen" data-price="16000" data-status="used">
+                    <div class="car-image">
+                        <img src="https://via.placeholder.com/400x300/34495e/ffffff?text=Volkswagen+Tiguan+2021" alt="VW Tiguan">
+                        <span class="car-badge used">Used</span>
+                    </div>
+                    <div class="car-info">
+                        <h3 class="car-title">Volkswagen Tiguan 2021</h3>
+                        <p class="car-specs">2.0L Turbo • AWD • Automatic • 48,000 km</p>
+                        <div class="car-details">
+                            <span class="detail-item">📅 2021</span>
+                            <span class="detail-item">⚙️ Automatic</span>
+                            <span class="detail-item">📏 48,000 km</span>
+                        </div>
+                        <div class="car-footer">
+                            <span class="car-price">$16,000</span>
+                            <button class="btn-contact">Contact Seller</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="sell-your-car">
+                <div class="sell-card">
+                    <h3>Want to Sell Your Car?</h3>
+                    <p>List your vehicle on ODO Motors marketplace and reach thousands of potential buyers</p>
+                    <button class="btn btn-primary" onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})">List Your Car</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2 class="section-title">About ODO Motors</h2>
+                    <p>ODO Motors is Uzbekistan's premier car dealership, specializing in importing high-quality vehicles from international markets and providing a trusted marketplace for used cars within the country.</p>
+                    <p>With years of experience in the automotive industry, we understand the needs of our customers and are committed to providing exceptional service, competitive pricing, and a wide selection of vehicles to choose from.</p>
+                    <div class="about-stats">
+                        <div class="stat">
+                            <h3>500+</h3>
+                            <p>Cars Imported</p>
+                        </div>
+                        <div class="stat">
+                            <h3>1000+</h3>
+                            <p>Happy Customers</p>
+                        </div>
+                        <div class="stat">
+                            <h3>5+</h3>
+                            <p>Years Experience</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <img src="https://via.placeholder.com/500x400/3498db/ffffff?text=ODO+Motors+Showroom" alt="ODO Motors">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <h2 class="section-title">Contact Us</h2>
+            <p class="section-subtitle">Get in touch with us for inquiries or to schedule a visit</p>
+            
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="info-card">
+                        <div class="info-icon">📍</div>
+                        <h3>Visit Us</h3>
+                        <p>Tashkent, Uzbekistan<br>Mirzo Ulugbek District</p>
+                    </div>
+                    <div class="info-card">
+                        <div class="info-icon">📞</div>
+                        <h3>Call Us</h3>
+                        <p>+998 XX XXX XX XX<br>+998 XX XXX XX XX</p>
+                    </div>
+                    <div class="info-card">
+                        <div class="info-icon">✉️</div>
+                        <h3>Email Us</h3>
+                        <p>info@odomotors.uz<br>sales@odomotors.uz</p>
+                    </div>
+                    <div class="info-card">
+                        <div class="info-icon">⏰</div>
+                        <h3>Business Hours</h3>
+                        <p>Mon - Sat: 9:00 AM - 7:00 PM<br>Sunday: 10:00 AM - 5:00 PM</p>
+                    </div>
+                </div>
+                
+                <div class="contact-form-wrapper">
+                    <form class="contact-form" id="contactForm">
+                        <div class="form-group">
+                            <input type="text" id="name" name="name" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="email" name="email" placeholder="Your Email" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="tel" id="phone" name="phone" placeholder="Your Phone" required>
+                        </div>
+                        <div class="form-group">
+                            <select id="inquiry" name="inquiry" required>
+                                <option value="">Select Inquiry Type</option>
+                                <option value="import">Imported Car Inquiry</option>
+                                <option value="used">Used Car Inquiry</option>
+                                <option value="sell">Sell My Car</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="message" name="message" rows="5" placeholder="Your Message" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-full">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>ODO<span>Motors</span></h3>
+                    <p>Your trusted partner for premium cars in Uzbekistan</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#import">Imported Cars</a></li>
+                        <li><a href="#marketplace">Used Cars</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="#import">Car Import</a></li>
+                        <li><a href="#marketplace">Buy Used Cars</a></li>
+                        <li><a href="#contact">Sell Your Car</a></li>
+                        <li><a href="#contact">Financing Options</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact Info</h4>
+                    <ul>
+                        <li>📍 Tashkent, Uzbekistan</li>
+                        <li>📞 +998 XX XXX XX XX</li>
+                        <li>✉️ info@odomotors.uz</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 ODO Motors. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
